@@ -1,0 +1,195 @@
+
+/* 05. header
+   ========================================================================== */
+.qt-pageheader {
+	position: relative;
+	background-color: #000;
+	height: auto;
+	overflow: hidden;
+	padding-top: 130%;
+	&.qt-pageheader-short {
+		padding-top: 50%;
+	}
+	&::before {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		background: #000;
+		opacity: 0.3;
+		left: 0;
+		top: 0;
+		will-change: opacity;
+		transition: opacity 0.3s;
+	}
+	.qt-headercontainer {
+		position: absolute;
+	    z-index: 100;
+	    bottom: 40px;
+	    margin: 0 auto;
+	    width: 100%;
+	}
+	.qt-menu-social {
+		li {
+			i {
+				opacity: 1;
+			}
+		}
+	}
+	.qt-tags {
+		display: block;
+		z-index: 1;
+		 position: relative;
+		li {
+			float: none;
+		}
+	}
+	.qt-vc{
+		position: relative;
+		z-index: 2;
+	} 
+	.qt-countdown-container {
+		max-width: 600px;
+		margin: 50px auto;
+	}
+	&.qt-pageheader-archive {
+		height: auto !important;
+	}
+
+	/**
+	 * =================== VIDEO HEADER ========================*/
+	
+	$qt-headeranimation-time: 0.3s;
+	$qt-inactive-height: 44%;
+	&.qt-pageheader-video {
+		padding-top: 0;
+		position: relative;
+		z-index: 2;
+		.qt-video-placeholder {
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			.qt-container {
+				.qt-thevideoholder {
+					padding-top:$qt-inactive-height;
+
+					background: transparent;
+					position: relative;
+					transition: padding-top $qt-headeranimation-time ease, background $qt-headeranimation-time;
+					overflow: hidden;
+					.qt-playbtn {
+						z-index: 2;
+					}
+					iframe {
+						top: -10000px;
+						position: absolute;
+						z-index: 1;
+						transition: opacity $qt-headeranimation-time;
+						transition-delay: $qt-headeranimation-time;
+						width: 100%;
+						height: 100%;
+						
+						opacity: 0;
+					}
+				}
+			}
+		}
+		.qt-scrolling-header {
+			.qt-container {
+				.qt-video-padder {
+					padding-top: $qt-inactive-height;
+					transition: padding-top $qt-headeranimation-time ease;
+				}
+				.qt-container-texts {
+					.qt-chapters {
+						padding: 0;
+						margin: 0;
+						li {
+							list-style: none;
+							padding: 0;
+							margin: 0;
+							line-height: 2rem;
+							a {
+								cursor: pointer;
+								position: relative;
+								padding: 0;
+								vertical-align: middle;
+								padding-right: 0.3rem;
+								transition: padding $qt-headeranimation-time;
+								padding: 0;
+								display: block;
+								line-height: 2rem;
+								&::before {
+									display: block;
+									position: absolute;
+									left: 0;
+									top: 0;
+									content: " ";
+									width: 0px;
+									height: 100%;
+									background: rgba(255,255,255,1);
+									z-index: -1;
+									transition: width $qt-headeranimation-time ease;
+								}
+								&.active {
+									padding-left: 0.3rem;
+									font-weight: bold;
+									color: #fff;
+									&::before {
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+					.tabs {
+						background: transparent;
+						border: none;
+						overflow: hidden;
+						h6 {
+							line-height: inherit;
+						}
+						&::after, &::before {
+							display: none;
+						}
+					}
+					.qt-part-archive-item.qt-part-archive-item-card-mini {
+						background: transparent;
+					} 
+				}
+				.qt-tabcontent {
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}
+	&.active {
+		.qt-video-placeholder {
+			.qt-container {
+				.qt-thevideoholder {
+					padding-top: 56.25%;
+					background: black;
+					iframe {
+						top: 0;
+						opacity: 1;
+					}
+					.qt-playbtn {
+						z-index: 1;
+					}
+				}
+			}
+		}
+		.qt-scrolling-header {
+			.qt-container {
+				.qt-video-padder {
+					padding-top: 56.25%;
+				}
+			}
+		}
+	}
+	
+}

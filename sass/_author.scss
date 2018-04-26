@@ -1,0 +1,59 @@
+
+/* Author */
+
+$photo-size: 110px;
+.qt-the-content {
+	.qt-post-author {
+		padding: 1rem;
+		margin-top: 2rem;
+		display: table;
+		a.qt-author-thumbnail {
+			img {
+				width: 100%;
+				height: auto;
+			}
+			width: $photo-size;
+			height: $photo-size;
+    		display: block;
+    		float: none;
+    		margin: 50px auto;
+		}
+		.qt-post-author-data {
+			
+		
+			display: block;
+		    float: none;
+		    width: 100%;
+		    padding: 0;
+
+			.qt-authorheader {
+				line-height: 1em;
+				border-bottom: 1px solid rgba(255,255,255,0.33);
+				padding: 0 0 1rem 0;
+				.qt-authorname {
+					display: inline-block;
+				}
+				.qt-authorsocial {
+					display: inline-block;
+					float: right;
+					font-size: 1.414rem;
+					margin: 0;
+					a {
+						color: inherit;
+					}
+				}
+			}
+			.qt-post-author-bio {
+				margin-top: 0.5rem;
+			}
+			
+		}
+		.qt-post-author-link {
+			padding-top: 2rem;
+			a.qt-btn {
+				width:100%;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,695 @@
+
+/* 05. header
+   ========================================================================== */
+
+.qt-part-archive-item {
+	position: relative;
+	overflow: hidden;
+	.qt-part-archive-item-header {
+		position: relative;
+		background: #000;
+		height: auto;
+		overflow: hidden;
+		display: block;
+		margin: 0;
+		padding-top: 56.25%;
+
+		background-attachment: local;
+	    background-size: cover;
+	    background-position: 50% 50%;
+	    &::after {
+	    	position: absolute;
+	    	z-index: 0;
+	    	content: " ";
+	    	width: 100%;
+	    	height: 100%;
+	    	top: 0;
+	    	left: 0;
+	    	background-color: #000;
+	    	opacity: 0.25;
+	    	transition: opacity 0.3s;
+	    	will-change: opacity;
+	    }
+	}
+	&:hover {
+		.qt-part-archive-item-header {
+			&::after {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.qt-vc {
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		
+	}
+	.qt-titles {
+		
+	}
+
+	.qt-tags {
+		display: block;
+		li {
+			float: none;
+		}
+	}
+	.qt-header-bg {
+		opacity: 0.7;
+		position: absolute;
+		z-index: 0;
+		background: black;
+		img {display: none;}
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		transition: opacity 0.35s ease, transform 0.35s ease;
+		transform: scale(1);
+		will-change: opacity, transform;
+	}
+	.qt-topmetas {
+		padding:1rem 1rem 0 1rem;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		line-height: 1rem;
+		text-transform: uppercase;
+	}
+	.qt-bottommetas {
+		padding: 0;
+		position: absolute;
+		z-index: 3;
+		line-height: 1rem;
+		text-transform: uppercase;
+		top: auto;
+		bottom: 0;
+	}
+	.qt-archive-item-topmetas {
+		position: relative;
+		z-index: 20;
+	}
+
+	.qt-item-metas {
+		vertical-align: bottom;
+		i {
+			font-size: 1rem;
+			position: relative;
+			margin-right: 5px;
+		}
+		.qt-secondaryaction {
+			display: inline-block;
+			min-width: 2.25rem;
+			text-align: center;
+			height: 2.25rem;
+			line-height: 2.25rem;
+			overflow: hidden;
+			background: rgba(0,0,0,0.6);
+			vertical-align: top;
+			cursor: pointer;
+			color: #fff !important;
+			i {
+				position: relative;
+				vertical-align: top;
+				margin-right: 0;
+
+			}
+		}
+	}
+	
+	.qt-headercontainer {
+		position: relative;
+		z-index: 2;
+		padding: 40px 0 ;
+		a {
+			color: #fff;
+		}
+		.qt-caption::after {
+			background: rgba(255,255,255, 0.3);
+		}
+	}
+
+	/* ================== Medium ====================*/
+	&.qt-part-archive-item-medium {
+		background: transparent;
+		.qt-topmetas {
+			padding: 1rem;
+		}
+		.qt-bottommetas {
+			padding: 0 1rem 1rem 1rem;
+		}
+		.qt-part-archive-item-header {
+			position: relative;
+			overflow: hidden;
+			padding-top: 56.25%;
+			background-color: black;
+			display: block;
+
+			
+
+			.qt-topmetas {
+				opacity: 0;
+				margin-top: 20px;
+				transition: opacity 0.25s ease, margin-top 0.25s ease;
+				will-change: opacity, margin-top;
+				-webkit-transform: translate3d(0, 0, 0);
+
+			}
+			
+		}
+		.qt-itemcontents {
+			margin: 0.707rem 0 1.414rem 0;
+
+			.qt-details {
+				
+				margin-top: 4px;
+			}
+		}
+		&:hover {
+			.qt-topmetas {
+				opacity: 1;
+				margin-top: 0px;
+			}
+			.qt-header-bg {
+				opacity: 0.5;
+			}
+		}
+		.qt-author-thumb {
+			display: none;
+
+		}
+		a.qt-authorurl {
+			color: inherit;
+		}
+	}
+
+	/* ================== Medium ====================*/
+	&.qt-part-archive-item-medium.qt-compact {
+		.qt-part-archive-item-header {
+			
+		}
+	}
+
+
+	/* ================== Large ====================*/
+	&.qt-part-archive-item-large {
+		background: transparent;
+		display: block;
+		margin-top: 40px;
+		&:first-child {
+			margin-top: 0;
+		}
+		.qt-part-archive-item-header {
+			overflow: hidden;
+			background-color: black;
+			display: block;
+			min-height: auto;
+			padding-top: 57%;
+			.qt-topmetas {
+				
+			}
+			.qt-topmetas {
+				padding: 1rem 0 0 0;
+				width: 100%;
+				opacity: 0;
+				position: absolute;
+				top: 30px;
+				-webkit-transform: translate3d(0, 0, 0);
+				transition: opacity 0.35s, top 0.35s ease;
+				will-change: opacity, top;
+			}
+			.qt-vc {
+				position: absolute;
+				bottom: 0;
+			}
+
+			.qt-headercontainer  {
+				padding-bottom: 8px;
+
+				.qt-item-metas {
+					margin-bottom: 0;
+					height: 0;
+					overflow: hidden;
+					-webkit-transform: translate3d(0, 0, 0);
+					transition: height 0.35s ease, opacity 0.5s;
+					will-change: height, opacity;
+					display: block;
+					opacity: 0;
+					a.right {
+						margin-top: -2px;
+					}
+				}
+			}
+
+
+		}
+		.qt-itemcontents {
+			a.qt-readmore  {
+				float: left;
+				display: table-cell;
+				margin-right: 1rem;
+				width: auto;
+			}
+
+		}
+		
+		&:hover {
+			.qt-topmetas {
+				opacity: 1;
+				top: 0px;
+			}
+			.qt-header-bg {
+				opacity: 0.5;
+			}
+			.qt-headercontainer .qt-item-metas {
+				height: 40px;
+				opacity: 1;
+			}
+			.qt-header-bg {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	/* ================== Card Simple ====================*/
+	&.qt-part-archive-item-card-simple {
+		.qt-part-archive-item-header {
+			padding-top: 149%;
+			.qt-topmetas {
+				padding: 1rem;
+				
+			}
+			.qt-titles {
+				padding: 0 1rem 1rem 1rem;
+				position: absolute;
+				bottom: 1rem;
+				.qt-details {
+					border-top: 2px solid rgba(255,255,255,0.3);
+					padding-top: 0.5rem;
+				}
+				i {
+					top: 0.1em;
+
+				}
+			}
+		}
+	}
+
+
+
+	/* ================== Custom Card ====================*/
+	&.qt-part-archive-item-customcard {
+		.qt-part-archive-item-header {
+			padding-top: 100%;
+			.qt-headercontainer  {
+				padding: 0;
+			}
+			.qt-vc {
+				padding: 0.7rem;
+				position: absolute;
+				bottom: 0;
+				.qt-details {
+					border-top: 2px solid rgba(255,255,255,0.3);
+					padding-top: 0.5rem;
+				}
+				i {
+					
+
+				}
+				.qt-item-metas {
+					margin-bottom: 0;
+					height: 0;
+					overflow: hidden;
+					transition: height 0.35s ease, opacity 0.5s;
+					-webkit-transform: translate3d(0, 0, 0);
+					will-change: height, opacity;
+					display: block;
+					opacity: 0;
+					i {
+						
+					}
+				}
+			}
+		}
+		&:hover {
+			.qt-header-bg {
+				opacity: 0.5;
+			}
+			.qt-headercontainer .qt-item-metas {
+				height: 40px;
+				opacity: 1;
+			}
+			.qt-header-bg {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+
+	/* ================== Inline item ====================*/
+	&.qt-part-archive-item-inline {
+		a {
+			display: block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		img {
+			width: 70px;
+			height: 70px;
+			float: left;
+			margin: 0 0.7rem 0 0;
+		}
+		.tit {
+			margin-top: 0.2em;
+			line-height: 1.2em;
+			a {
+				&:hover {
+					color: auto;
+				}
+			}
+		}
+		.qt-date {
+			font-size: 0.7rem;
+			opacity: 0.8;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			line-height: 1.2em;
+		}
+		padding: 0;
+		clear:both;
+		margin: 0 0 0.707rem 0;
+		list-style-type: none;
+		&::after {
+			display: table;
+			clear: both;
+			width: 100%;
+			content: " ";
+		}
+	}
+
+	&.qt-part-archive-item-card-mini {
+		.qt-item-image {
+			display: block;
+			content: " ";
+			width: 100%;
+			height: auto;
+			padding-top: 133%;
+			margin-bottom: 5px;
+			background-position: center center;
+			background-size: cover !important;
+		}
+		display: block;
+		margin-bottom: 1rem;
+		transition: box-shadow 0.2s;
+		will-change: box-shadow;
+		box-shadow: 0 0 0 transparent;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: scale(1);
+		background: #fff;
+		position: relative;
+		color: inherit;
+		p {
+			padding: 4px 2px 0 2px;
+			line-height: 1.2em;
+			transition: padding 0.2s;
+			-webkit-transform: translate3d(0, 0, 0);
+			will-change: padding;
+			min-height: 3.6em;
+		}
+		&:hover {
+			//transform: scale(1.02);
+			/* z-index: 100; */
+			// box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+			p {
+				padding: 4px 0px 0 4px;
+			}
+		}
+	}
+
+	/* ================== Video ====================*/
+	&.qt-part-archive-item-video {
+		padding: 0 1px;
+		position: relative;
+		
+		padding-top: 56.25%;
+		a {
+			height: 100%;
+			position: absolute;			
+			padding: 1rem;
+
+			&::after {
+				display: block;
+				content: " ";
+				width: 100%;
+				height: 100%;
+				background: #000;
+				left: 0;
+				top: 0;
+				position: absolute;
+				z-index: 100;
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+
+
+			.qt-caption {
+				position: absolute;
+				bottom: -100px;
+				z-index: 120;
+				top: auto;
+				transition: bottom 0.3s ease;
+				width: calc(100% - 2rem);
+			}
+		}
+		&:hover {
+			
+			a {
+				&::after {
+					opacity: 0.5;
+				}
+				.qt-caption {
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+
+	/* ================== Card interactive ====================*/
+	&.qt-part-archive-item-card-interactive {
+		$card-height-mobile: 430px;
+		$card-titles-height-mobile: 140px;
+		$contents-height-mobile: 240px; // keep 50px for menu
+		
+		width: 100%;
+
+		overflow: hidden;
+		box-shadow: 0 0 0 transparent;
+		-webkit-transform: translate3d(0, 0, 0);
+		transition: box-shadow 0.3s;
+		will-change: box-shadow;
+		padding-top: 120%;
+		
+
+		.qt-part-archive-item-header {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 2;
+			padding-top: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			transition: height 0.3s ease;
+			will-change: height;
+			.qt-topmetas {
+				padding: 1rem;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				.qt-activate-card {
+					display: none;
+				}
+			}
+			.qt-titles {
+				padding: 0 0 1rem 0;
+				height: auto;
+				position: absolute;
+				bottom: 0;
+				transition: height 0.4s ease;
+				-webkit-transform: translate3d(0, 0, 0);
+				will-change: height;
+				.qt-details {
+					border-top: 2px solid rgba(255,255,255,0.3);
+					padding-top: 0.5rem;
+				}
+				i {
+					top: 0.1em;
+
+				}
+				.qt-actionpart {
+					height: 0;
+					padding: 0;
+					margin: 0;
+					opacity: 0;
+					height: 0;
+					position: relative;
+					.qt-item-metas {
+						position: absolute;
+						width: auto;
+						top: 0;
+						right: 0;
+					}
+				}
+				.qt-tags, .qt-title, .qt-details, .qt-actionpart {
+					transition: height 0.3s, opacity 0.3s;
+					-webkit-transform: translate3d(0, 0, 0);
+					will-change: height, opacity;
+					overflow: hidden;
+					opacity: 1;
+				}
+			}
+
+		}
+		.qt-part-archive-item-morecontents.qt-cardtabs {
+			
+			opacity: 0;
+			padding: 50px 0 0 0;
+			transition-delay: 0.4s;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			height: calc(100% - 170px);
+			width: 100%;
+			z-index: 1;
+			transition: top 0.3s ease;
+			-webkit-transform: translate3d(0, 0, 0);
+			will-change: top;
+			.tabs {
+				h6 {
+					line-height: inherit;
+				}
+			}
+
+			::-webkit-scrollbar {
+				  width: 8px;
+				  height: 8px;
+				}
+				::-webkit-scrollbar-button {
+				  width: 0px;
+				  height: 0px;
+				}
+				::-webkit-scrollbar-thumb {
+				  background: #e1e1e1;
+				  border: 0px none #ffffff;
+				  border-radius: 0px;
+				}
+				::-webkit-scrollbar-thumb:hover {
+				  background: #ffffff;
+				}
+				::-webkit-scrollbar-thumb:active {
+				  background: #000000;
+				}
+				::-webkit-scrollbar-track {
+				  background: #666666;
+				  border: 0px none #ffffff;
+				  border-radius: 0;
+				}
+				::-webkit-scrollbar-track:hover {
+				  background: #666666;
+				}
+				::-webkit-scrollbar-track:active {
+				  background: #333333;
+				}
+				::-webkit-scrollbar-corner {
+				  background: transparent;
+				}
+
+
+			.qt-the-content {
+				padding-bottom: 1rem;
+				height: calc(100% - 20px);
+				overflow-y: auto;
+				overflow-x: hidden;
+				
+			}
+		}
+
+		
+
+		/* Open State */
+		&.open {
+			box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+			.qt-cardtabs {
+				//display: block;
+				opacity: 1;
+				padding: 0px 0 0 0;
+			}
+			.qt-part-archive-item-header {
+				height: 150px;
+				.qt-topmetas {
+					.qt-activate-card {
+						display: inline-block;
+					}
+				}
+				.qt-titles {
+					height: 150px;
+					.qt-tags, .qt-title, .qt-details {
+						height: 0px;
+						opacity: 0;
+						border: none;
+					}
+					.qt-actionpart {
+						height: auto;
+						opacity: 1;
+					}
+				}
+			}
+			.qt-part-archive-item-morecontents.qt-cardtabs {
+				top: 150px;
+
+			}
+		}
+		
+	}
+
+
+
+
+	&.qt-part-archive-item-upcoming {
+		z-index: 2;
+		.qt-part-archive-item-header {
+			min-height: 290px;
+		}
+		.qt-archive-item-topmetas {
+			position: absolute;
+			width: 100%;
+			top: 1rem;
+		}
+	}
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

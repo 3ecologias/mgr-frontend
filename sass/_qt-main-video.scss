@@ -1,0 +1,7 @@
+.qt-main-video {
+	position: relative;
+	overflow: hidden;
+	.qt-pushpin.pinned {
+		z-index: 1;
+	}
+}

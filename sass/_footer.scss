@@ -1,0 +1,76 @@
+/* 06. Footer
+   ========================================================================== */
+
+
+
+.qt-footer {
+	position: relative;
+	z-index: 2;
+	.qt-footer-widgets {
+		position: relative;
+	}
+	.qt-container {
+		position: relative;
+		z-index: 2;
+	}
+	.qt-footer-twitter {
+		text-align: center;
+		.qt-tweet-featured {
+			.qt-title {
+
+			}
+			.qt-tweet-content {
+				font-size: 32px;
+				line-height: 1.2em;
+				padding: 1rem 0;
+				font-style: italic;
+				opacity: 0.6;
+			}
+			.qt-tweet-author {
+				
+			}
+		}
+	}
+}
+.qt-extrafooter {
+	position: relative;
+	bottom: 0;
+	display: block;
+	min-height: 5rem;
+	z-index: 18;
+	width: 100%;
+	
+	.qt-scrollupbtn  {
+		display: none;
+	}
+
+	ul.qt-extrafooter-menu {
+
+		min-height: 5rem;
+		line-height: 1rem;
+		padding-top: calc(4rem / 2);
+		
+		display: block;
+		width: 100%;
+
+		margin: 0;
+		li {
+			margin: 0;
+			padding: 0 0 1rem 0;
+			list-style: none;
+			display: block;
+			clear: both;
+			
+			&.qt-right {
+				float: none;
+				text-align: left;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+.qt-related-section  {
+	position: relative;
+	z-index: 2;
+}

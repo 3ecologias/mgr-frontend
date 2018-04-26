@@ -1,0 +1,251 @@
+
+/* Menu bar top  ============================*/
+
+$qt-secondarymenu-height: 50px;
+
+ul.qt-menu-secondary {
+	position: relative;
+	z-index: 300;
+	margin: 0;
+	padding: 0 70px;
+	overflow: hidden;
+	height: $qt-secondarymenu-height;
+	transition: height 0.3s;
+	li {
+		display: inline;
+		line-height: $qt-secondarymenu-height;
+		height: $qt-secondarymenu-height;
+		padding: 0;
+		font-size: 0.7rem;
+		font-weight: 400;
+    text-rendering: optimizeLegibility;
+		a {
+			
+			line-height: $qt-secondarymenu-height;
+			font-size: 0.7rem;
+			padding: 0 0.5rem;
+			vertical-align: top;
+			i {
+				font-size:1.2em;
+				opacity: 1;
+				margin-top: 0.7em;
+			}
+		}
+		&.qt-social-link {
+			float: right;
+			a {
+				font-size: 25px;
+				padding: 0;
+				i {
+					top: 3px;
+				}
+			}
+			
+		}
+		&.qt-social-link {
+			padding-left: 0.5rem;
+		}
+	}
+	.qt-btn-s {
+		position: relative;
+		top: 13px;
+		margin: 0 8px;
+	}
+}
+.qt-scrolled {
+	ul.qt-menu-secondary {
+		height: 0px;
+	}
+}
+
+
+/* 04. Menu
+   ========================================================================== */
+nav .button-collapse i {
+	font-size: 1.4em;
+}
+
+/* Menu bar top  ============================*/
+.qt-menubar-top {
+	position: relative;
+	z-index: 300;
+	margin: 0;
+	padding: 0 0.5rem;
+	overflow: hidden;
+
+	ul {
+
+		li {
+			display: inline;
+			line-height: 30px;
+			height: 30px;
+			padding: 0 0.2rem;
+			
+			a {
+				
+				line-height: 30px;
+				i {
+					font-size:1em;
+					opacity: 1;
+				}
+
+			}
+		}
+		> li a:hover {
+			background: none;
+		}
+	}
+}
+
+
+
+/* Menu bar  ============================*/
+
+.qt-menubar {
+	position: relative;
+	z-index: 300;
+	margin: 0;
+	padding: 0;
+	display: table;
+	nav.qt-menubar {
+		margin: 0;
+		padding: 0 1rem;
+
+		.qt-logo-text {
+			position: relative;
+			float: left;
+			line-height: (3 * $qt-font-scale)+rem;
+		}
+		ul.qt-desktopmenu > li.qt-logo-link > a.brand-logo {
+			padding: 0;
+		}
+		ul.qt-desktopmenu > li a:hover {
+			    background-color:transparent;
+		}
+	}
+	i {
+		font-size: 22px;
+		line-height: 22px;
+		position: relative;
+		top: 5px;
+	}
+	.qt-menusocial {
+		
+		margin-left: 5;	
+		&.qt-first {
+			margin-left: 40px;
+		}
+		a  {
+			padding: 0 2px;
+			i {
+				opacity: 0.6;
+			}
+		}
+	}
+	.qt-menutrigger a  {
+		margin-left: 40px;
+		padding: 0;
+		i  {
+			font-size: 32px;
+			line-height: 32px;
+			top: 8px;
+		}
+	}	
+}
+
+
+
+.qt-menu-social {
+	font-size: 1.414rem * 1.414;
+	line-height: 1.5em;
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: inline;
+		i {
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+
+
+/* Mobile menu  ============================*/
+.side-nav {
+	width: 273px;
+}
+ul.qt-side-nav {	
+	margin: 0;
+	margin-left: 0;
+	li {
+		float: none;
+		line-height: 1.3em;
+		
+		display: block;
+		position: relative;
+		padding: 0;
+		margin: 0;
+		&.active { 
+			background-color: rgba(0,0,0,.05); 
+		}
+		a {
+			display: block;
+			height: auto;
+			line-height: inherit;
+			padding: 0.707rem 1rem;
+			&:hover { background-color: rgba(0,0,0,.05);}
+			&.btn, &.btn-large, &.btn-flat, &.btn-floating {
+			  margin: 10px 15px;
+			}
+			&.btn,
+			&.btn-large,
+			&.btn-floating { color: $button-raised-color; }
+			&.btn-flat { color: $button-flat-color; }
+
+			&.btn:hover,
+			&.btn-large:hover { background-color: lighten($button-raised-background, 5%); }
+			&.btn-floating:hover { background-color: $button-raised-background; }
+		}
+		&.menu-item-has-children  { 
+			> a::after {
+
+				display: inline;
+				font-family: "dripicons-v2";
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				content: "\54";
+				position: relative;
+				right:10px;
+				top: 50%;
+				line-height: 2rem;
+				height: 2rem;
+				float: right;
+				margin-top: -0.8rem;
+			}
+			&.open {
+				height: auto;
+				ul {
+					display: block;
+				}
+				> a::after {
+					content: "\57";
+				}
+			}
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: none;
+		}
+	}
+}
+
+

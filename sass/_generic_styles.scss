@@ -1,0 +1,402 @@
+
+/* 01. Generic styles
+   ========================================================================== */
+
+*,:before,:after {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-backface-visibility:hidden;
+	margin: 0;
+	padding: 0;
+}
+a {
+	outline: none !important;
+}
+.qt-parentcontainer {
+	overflow-x: hidden;
+}
+.qt-fullheight {
+	min-height: 100vh;
+}
+iframe {
+	width: 100%;
+	border: none;
+	margin: 0 0 1rem 0;
+}
+.qt-main {
+	position: relative;
+	z-index: 2;
+	box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+.qt-container {
+	width: 90%;
+	max-width: $qt-max-container-size;
+	margin: 0 auto;
+	.row {
+		margin-left: -0.75rem;
+		margin-right: -0.75rem;
+	}
+}
+.qt-container-fullscreen {
+	max-width: 2000px;
+	padding: 0 40px;
+}
+.qt-clearfix {
+	&::after, &::before {
+		display: block;
+		width: 100%;
+		clear: both;
+	}
+	border: none;
+	clear: both;
+}
+.qt-body {
+	position: relative;
+	z-index: 300;
+}
+.qt-hidden {
+	display: none;
+}
+.row {
+	margin: 0 -0.75em;
+}
+.qt-nopadding {
+	> .col { 
+		padding: 0;
+	}
+	margin: 0;
+}
+.row.qt-nopadding  {
+	margin: 0;
+}
+
+
+.qt-lowpadding {
+	> .col { 
+		padding: 1px;
+	}
+	margin: 0;
+}
+.row.qt-lowpadding  {
+	margin: 0 -1px;
+}
+
+.qt-relative {
+	position: relative;
+}
+.qt-expandable {
+	height: 0;
+	overflow: hidden;
+}
+.qt-img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+.qt-rotate-90 {
+	 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	  -webkit-transform: rotate(90deg);
+	  -moz-transform: rotate(90deg);
+	  -ms-transform: rotate(90deg);
+	  -o-transform: rotate(90deg);
+	  transform: rotate(90deg);
+	  display: inline-block;
+}
+.qt-paddedcontent {
+	padding: 30px;
+}
+.qt-paddedcontent-s {
+	padding: 1rem;
+}
+.qt-scroll-indicator {
+	opacity: 1;
+	animation: indicatoranimation 0.5s infinite;
+	animation-duration: 1.8s;
+	animation-iteration-count: infinite; 
+	position: relative;
+	z-index: 10;
+	top: 0;
+	font-size: 32px;
+}
+@keyframes indicatoranimation { 
+	0% { top: 0;}  
+	50% { top: 10px;}
+	100% { top: 0; }  
+}
+
+[data-bgimage] {
+	background-size:cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+[data-parallax="1"] {
+	background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.qt-section {
+	position: relative;
+	overflow: hidden;
+	> .qt-container {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+
+.qt-blur-bg {
+	filter: blur(7px);
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+.qt-black-bg {
+	background: #101010;
+}
+.material-tooltip {
+	padding: 6px 8px;
+    font-size: 13px;
+    background-color: black;
+    min-height: 20px;
+    line-height: 120%;
+}
+/*  Spacers ==========================================================================*/
+
+.qt-spacer-l {
+	margin-top: 2.4rem;
+}
+.qt-spacer-m {
+	margin-top: 1.6rem;
+}
+.qt-spacer-s {
+	margin-top: 1rem;
+}
+.qt-spacer-xs {
+	margin-top: 0.6rem;
+}
+
+hr[class^="qt-spacer"] {
+	height: 0;
+	border: none;
+	background: transparent;
+}
+
+.qt-vertical-padding-l {
+	padding: 2.4rem 0 1.8rem 0;
+}
+.qt-vertical-padding-m {
+	padding: 1.6rem 0 1.3rem 0;
+}
+
+.qt-vertical-padding-s {
+	padding: 1rem 0;
+}
+
+
+/*  Common items ==========================================================================*/
+
+.qt-fullwidth {
+	width: 100%;
+}
+.qt-card {
+	box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+	border-radius: 3px;
+	display: block;
+	overflow: hidden;
+}
+.qt-thumbnail {
+	border-radius: 3px;
+	display: block;
+	overflow: hidden;
+	line-height: 0;
+}
+.qt-card-title {
+	padding: 40px;
+	text-align: center;
+}
+.qt-card-s {
+	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+.qt-vc {
+	display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.qt-vi {
+	display: table-cell;
+	width: 100%;
+    vertical-align: middle;
+}
+.qt-vi-bottom {
+	display: table-cell;
+	width: 100%;
+    vertical-align: bottom;
+}
+
+
+.qt-decor-side {
+	padding-left: 1rem;
+	position: relative;
+	&::after {
+		display: block;
+		width: 3px;
+		content: " ";
+		background: $qt-color-accent;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0.3;
+	}
+	&:hover::after {
+		width: 100%;
+	}
+	&.qt-decor-side-right {
+		border-left: none;
+		padding-left: 0;
+		border-right: 14px solid;
+		padding-right: 14px;
+		text-align: right;
+	}
+	&.qt-s {
+		border-width: 7px;
+	}
+	h5, p {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+$qt-play-btn-size: 80px;
+
+.qt-playbtn {
+	width: $qt-play-btn-size;
+	height: $qt-play-btn-size;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	margin-left: -40px;
+	margin-top: -40px;
+	line-height: $qt-play-btn-size;
+	text-align: center;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	font-size: 34px;
+	color: #fff;
+	transform: scale(1);
+	
+	i {
+		text-align: center;
+		line-height: $qt-play-btn-size;
+		height: $qt-play-btn-size;
+		top: 0;
+		padding-left: 5px;
+		transform: scale(1);
+	}
+	&:hover {
+		opacity: 1 !important;
+		animation: none;
+		i {
+			
+		}
+		transform: scale(1.1);
+	}
+}
+
+.qt-fadein{
+  animation: animationFrames ease 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: animationFrames ease 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: animationFrames ease 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: animationFrames ease 2s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: animationFrames ease 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@keyframes animationFrames{
+  0% {
+    opacity:0.6;
+  }
+  51% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.6;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    opacity:0.6;
+  }
+  51% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.6;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    opacity:0.6;
+  }
+  51% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.6;
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    opacity:0.6;
+  }
+  51% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.6;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    opacity:0.6;
+  }
+  51% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.6;
+  }
+}

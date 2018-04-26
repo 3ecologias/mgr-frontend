@@ -1,0 +1,20 @@
+.qt-item-metas {
+	width: 100%;
+	text-align: left;
+	line-height: 30px;
+	display: table;
+	margin-bottom: 1rem;
+	font-size: 0.707em;
+	.qt-author-thumb {
+		width: 30px;	
+	    height: 30px;
+	    overflow: hidden;
+	    display: table-cell;
+		float: left;
+		margin: 0 10px 0 0;
+		border-radius: 50%;
+	}
+	a {
+		color: inherit;
+	}
+}

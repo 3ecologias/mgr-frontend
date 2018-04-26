@@ -1,0 +1,280 @@
+	
+
+
+/*  Text colors =============================== */
+
+body, html, .qt-content-main, .qt-negative .qt-caption-small span, .qt-paper, .qt-card   {
+	color: $qt-text-color;
+}
+
+
+
+.qt-color-secondary, .qt-breadcrumb a {
+	color: $qt-color-secondary;
+}
+
+
+
+*::placeholder {
+	color: $qt-text-color;
+	opacity: 0.7;
+}
+
+a, ul.qt-list-featured li::before { color: $qt-color-accent; }
+
+
+
+.qt-part-archive-item.qt-herobox .qt-item-header .qt-herobox-header { 
+	text-shadow: 0 4px 0 $qt-color-accent;
+}
+
+a:hover { color: $qt-color-accent-hover; }
+
+.qt-content-main a, a.qt-logo-text span {
+	color: $qt-color-accent; 
+}
+
+.qt-text-secondary, .qt-footerwidgets {
+	a { color: $qt-color-secondary; }
+}
+
+.qt-item-header .qt-title a,
+.qt-negative, 
+.qt-content-primary-dark,
+.qt-content-primary,
+.qt-content-primary-light,
+.qt-accent, .qt-btn-primary, .btn-primary,
+.qt-secondary, a.qt-btn-secondary, .btn-secondary, 
+nav.qt-menubar ul.qt-desktopmenu a:hover, .qt-side-nav a,
+.qt-negative h1, .qt-negative h2,.qt-negative h3,.qt-negative h4,.qt-negative h5,.qt-negative h6,
+.qt-tags li a, a.qt-sharelink, .qt-post-author-name a {
+	color: $qt-text-color-negative ;
+}
+
+.qt-cotent-primary {
+	h1, h2, h3, h4, h5, h6 {
+		color: $qt-titles-color;
+	}
+}
+
+
+.qt-text-neg, .qt-item-header h1, .qt-item-header h2, .qt-item-header h3, .qt-item-header h4, .qt-item-header h5, .qt-item-header h6,
+.qt-logo-text, a.qt-btn-primary, a.qt-btn-secondary  {
+	color: $qt-text-color-negative;
+}
+.qt-logo-text, a.qt-btn-primary, a.qt-btn-secondary, .pagination li {
+	color: $qt-text-color-negative ;
+}
+
+.qt-mobile-menu, 
+.qt-menu-social a,
+.qt-menubar-top a  {
+	color: $qt-text-color-negative-light;
+}
+.qt-menubar, .qt-side-nav  {
+	a {
+		color: $qt-text-color-negative;
+	}
+}
+
+.qt-negative {
+	p, ul, ol, h1, h2, h3, h4, h5, h6, .qt-btn-ghost {
+		color:  $qt-text-color-negative;
+	}
+}
+
+
+
+.qt-content-aside {
+	color: $qt-text-color-secondary;
+	a { color: $qt-color-secondary; }
+	.qt-tags a, .qt-decor-side::after, .qt-btn:not(.qt-btn-ghost) {
+		background-color: $qt-color-secondary;
+	}
+	.qt-btn {
+		color: $qt-text-color-negative !important;
+	}
+}
+
+/*  =====================================================================================================================
+
+Background colors 
+
+===================================================================================================================== */
+blockquote::before {
+	background: $qt-color-background;
+}
+body, html, .qt-body, .qt-main  {
+	background-color:$qt-color-background;
+}
+.qt-content-desk {
+	background-color:$qt-color-background !important;
+}
+
+
+.qt-widgets  {
+	.qt-caption-small::after {
+		background-color: $qt-primary-color;
+	}
+}
+
+.qt-paper, .qt-card, .qt-card-s
+ {
+	background-color: $qt-color-paper;
+}
+.qt-caption-small span {
+	background-color: $qt-primary-color; 
+}
+.qt-text-secondary .qt-caption-small span , .qt-desktopmenu li li a{
+	background-color: $qt-primary-color;
+}
+.qt-content-primary, .qt-menubar-top,  {
+	background-color: $qt-primary-color !important;
+}
+.qt-content-primary-dark, .qt-mobile-menu,
+.qt-caption-small span {
+	background-color: $qt-primary-color-dark !important; 
+}
+.qt-content-primary-light {
+	background-color: $qt-primary-color-light;
+}
+.qt-btn, .qt-accent, .qt-btn-primary, .btn-primary, nav.qt-menubar ul.qt-desktopmenu li li a:hover, .qt-sharepage a:hover,
+.qt-btn-primary, 
+.qt-menubar ul.qt-desktopmenu > li > a::after, 
+.qt-menubar ul.qt-desktopmenu > li > a:not(.qt-btn-ghost):not(.qt-logo-text)::after, 
+ .qt-tags.qt-tags-accent li a, 
+ .qt-btn-ghost:hover, 
+.pagination li,
+.qt-part-archive-item.qt-herobox .qt-header-mid .qt-inline-textdeco::before, .qt-featured-title::before,.qt-decor-side::after,.qt-tags li a  {
+	background-color: $qt-color-accent ;
+}
+a.qt-link-layer {
+	background-color: $qt-color-accent-hover ; 
+}
+.qt-secondary, .qt-btn-secondary, .btn-secondary, .qt-side-nav li li a, .qt-caption-med span.qt-cap-d, .qt-caption-med span.qt-cap-d::after, .qt-caption-med span.qt-cap-d::before, 
+.slick-slider .slick-arrow::after, .slick-slider .slick-dots li.slick-active button,  .qt-inline-textdeco i::after, .qt-widget-list ul.qt-categories li a::before {
+	background-color: $qt-color-secondary ; 
+}
+
+.slick-slider .slick-dots li button {
+	background-color: $qt-color-secondary-hover; 
+}
+
+.qt-negative .qt-caption-small span {
+	background-color: $qt-text-color-negative;
+}
+
+.qt-content-primary, .qt-content-primary-dark, .qt-content-primary-light, .qt-accent, .qt-btn-primary, .btn-primary, nav.qt-menubar ul.qt-desktopmenu a:hover, .qt-sharepage a:hover {
+	i {
+		opacity: 1;
+	}
+}
+
+
+
+/* Special buttons horizontal gradient */
+
+.qt-btn-primary {
+	background: -moz-linear-gradient(left,  $qt-color-accent-hover 0%, $qt-color-accent-hover 50%, $qt-color-accent 50%, $qt-color-accent 100%); 
+	background: -webkit-linear-gradient(left,  $qt-color-accent-hover 0%,$qt-color-accent-hover 50%, $qt-color-accent 50%,$qt-color-accent 100%);
+	background: linear-gradient(to right,  $qt-color-accent-hover 0%,$qt-color-accent-hover 50%, $qt-color-accent 50%, $qt-color-accent 100%); 
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+    background-position-x: 98%;
+}
+
+.qt-btn-secondary {
+	background: -moz-linear-gradient(left,  $qt-color-secondary-hover 0%, $qt-color-secondary-hover 50%, $qt-color-secondary 50%, $qt-color-secondary 100%);
+	background: -webkit-linear-gradient(left,  $qt-color-secondary-hover 0%,$qt-color-secondary-hover 50%, $qt-color-secondary 50%,$qt-color-secondary 100%);
+	background: linear-gradient(to right,  $qt-color-secondary-hover 0%,$qt-color-secondary-hover 50%, $qt-color-secondary 50%, $qt-color-secondary 100%);
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+    background-position-x: 98%;
+}
+
+
+/*  Border colors =============================== */
+
+.qt-inline-textdeco::after {
+	border-color:$qt-text-color;
+}
+.qt-negative .qt-inline-textdeco::after,
+.qt-menubar ul.qt-desktopmenu > li::after, 
+.qt-menubar ul.qt-desktopmenu > li > a::after,
+.qt-menubar ul.qt-desktopmenu > li > a::before ,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover::after, 
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover > a::after,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item:hover > a::before,
+.qt-negative .qt-caption-small, 
+.qt-negative .qt-btn-ghost{
+	border-color: $qt-text-color-negative;
+}
+.qt-menubar ul.qt-desktopmenu > li.current_page_item::after, 
+.qt-menubar ul.qt-desktopmenu > li.current_page_item > a::after,
+.qt-menubar ul.qt-desktopmenu > li.current_page_item > a::before {
+	border-color: $qt-color-accent !important;
+	opacity: 1;
+}
+.qt-pageheader .qt-caption, .qt-part-archive-item.qt-herobox .qt-header-mid .qt-herobox-header {
+	border-color: $qt-color-accent;
+}
+.qt-caption-small  {
+	border-color:  $qt-primary-color;
+}
+
+.qt-the-content {
+	dl {
+		dd, dt {
+			border-color: $qt-color-accent;
+		}
+	}
+}
+
+.qt-widget-title {
+	border-color: $qt-color-secondary !important;
+}
+
+/* desktop hover states colors
+========================================================================== */
+
+@media #{$large-and-up} {
+	/* Menu bar top  */
+	.qt-menubar-top a, .qt-btn-secondary, .btn-secondary, .qt-btn-secondary, .qt-content-aside .qt-tags li a  {
+		&:hover {
+			background-color: $qt-color-secondary-hover;
+			color: $qt-text-color-negative;
+		}
+	}
+	.qt-menubar a, .qt-menu-social a, .qt-title a {	
+		&:hover {
+			color: $qt-color-accent-hover ; 
+		}
+	}
+	.qt-tags li a, .pagination li, .qt-tags a, a.qt-btn-ghost  {
+		&:hover {
+			background-color: $qt-color-accent-hover ;
+			color: $qt-text-color-negative;
+		}
+	}
+
+	.qt-text-secondary a, .qt-footerwidgets a, .qt-breadcrumb a,.qt-footer a,  {
+		&:hover { 
+			color: $qt-color-secondary-hover; 
+		}
+	}
+	.qt-content-aside {
+		a, .qt-title a, .qt-item-header .qt-title a {
+			&:hover { 
+				color: $qt-color-secondary-hover; 
+			}
+		}
+		.qt-tags li a {
+			&:hover {
+				background-color: $qt-color-secondary-hover;
+			}
+		}
+	}
+	
+}
+
+
